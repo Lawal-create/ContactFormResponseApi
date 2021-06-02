@@ -4,13 +4,17 @@
   "description": "test",
   "main": "server.js",
   "dependencies": {
+    "custom-env": "^2.0.1",
+    "dotenv": "^10.0.0",
+    "env": "0.0.2",
     "express": "^4.17.1",
+    "mongoose": "^5.12.12",
     "nodemon": "^2.0.7"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "Laweezy",
   "license": "ISC"
