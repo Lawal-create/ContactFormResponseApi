@@ -5,22 +5,16 @@ const schemas=require(`../models/contact_schema.js`)
 
 exports.getSpecificData=async(req,res)=> {
     try{
-        console.log("1st")
+        //filters the data passed 
         const search_value =req.query
-        console.log("2nd")
         const results=await schemas.find(search_value)
-        console.log("3rd")
         res.status(200).json(results)
-        console.log("4th")
     }catch(error){
         res.status(500).json({
             status: 'failure',
             error: error.message
           });
     }
-   
-    
-        
 }
     
 

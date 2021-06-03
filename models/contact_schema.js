@@ -1,8 +1,9 @@
 const mongoose=require("mongoose")
 
+//Schema for the form input
 const contact=new mongoose.Schema({
     inquiry:{
-    type:String,
+    type:String
     },
     
     Firstname: {
@@ -23,6 +24,4 @@ const contact=new mongoose.Schema({
 })
 
 const Contact=mongoose.model("Contact",contact)
-
-
 module.exports=Contact
