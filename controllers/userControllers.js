@@ -1,29 +1,48 @@
 const express=require("express")
+express()
 const inquiryList=["I have a question about the service","I have a problem with the API","I have an issue with the product that needs to be resolves urgently","I have a minor problem","My inquiry isn't amongst the ones mentioned above"]
-const schemas=require(`../models/contact_schema`)
+const schemas=require(`../models/contact_schema.js`)
 
-exports.getSpecificData=(req,res)=> {
-        res.send("Server is working perfectly at port 3000...")
+exports.getSpecificData=async(req,res)=> {
+    try{
+        console.log("1st")
+        const search_value =req.query
+        console.log("2nd")
+        const results=await schemas.find(search_value)
+        console.log("3rd")
+        res.status(200).json(results)
+        console.log("4th")
+    }catch(error){
+        res.status(500).json({
+            status: 'failure',
+            error: error.message
+          });
     }
-
+   
+    
+        
+}
+    
 
 exports.saveFormData=(req, res)=> {
-        let value = req.body
-        const index = parseInt(value.inquiry)
-        value.inquiry = inquiryList[index]
 
-        let testContact = new schemas(value)
-        console.log(value)
-        res.status(200).json(value)
-
-        testContact
-            .save()
-            .then(doc => {
-                console.log(doc)
-            }).catch(err => {
-                console.log("ERROR")
-            })
-    }
+    //creates the user object using the schema
+    let value = req.body
+    const index = parseInt(value.inquiry)
+    value.inquiry = inquiryList[index]
+    let testContact = new schemas(value)
     
+    //saves the data gotten to the database
+    try{
+        testContact.save()
+        res.status(200).json(testContact)
+        console.log(testContact)
+
+
+    } catch(error){
+        res.status(500).send(error)
+    }
+}
+
 
 

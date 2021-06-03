@@ -19,31 +19,3 @@ app.use("/",userRoutes)
 app.listen(port,hostname,()=>{
     console.log(`Server is running at port ${port}`)
 })
-
-// function getSpecificData() {
-//     return (req, res) => {
-//         res.send("Server is working perfectly at port 3000...")
-
-//     }
-// }
-
-// function saveData() {
-//     return (req, res) => {
-//         let value = req.body
-//         const index = parseInt(value.inquiry)
-//         value.inquiry = inquiryList[index]
-
-//         let testContact = new schemas(value)
-//         console.log(value)
-//         res.status(200).json(value)
-
-//         testContact
-//             .save()
-//             .then(doc => {
-//                 console.log(doc)
-//             }).catch(err => {
-//                 console.log("ERROR")
-//             })
-
-//     }
-// }
