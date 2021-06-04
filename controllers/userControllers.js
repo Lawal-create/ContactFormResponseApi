@@ -3,7 +3,7 @@ express()
 const inquiryList=["I have a question about the service","I have a problem with the API","I have an issue with the product that needs to be resolves urgently","I have a minor problem","My inquiry isn't amongst the ones mentioned above"]
 const schemas=require(`../models/contact_schema.js`)
 
-exports.getSpecificData=async(req,res)=> {
+getSpecificData=async(req,res)=> {
     try{
         //filters the data passed 
         const search_value =req.query
@@ -18,7 +18,7 @@ exports.getSpecificData=async(req,res)=> {
 }
     
 
-exports.saveFormData=(req, res)=> {
+saveFormData=(req, res)=> {
 
     //creates the user object using the schema
     let value = req.body
@@ -38,5 +38,10 @@ exports.saveFormData=(req, res)=> {
     }
 }
 
+module.exports={
+    saveFormData,
+    getSpecificData,
+    inquiryList
+}
 
 
