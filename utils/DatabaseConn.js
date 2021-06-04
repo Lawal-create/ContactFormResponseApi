@@ -19,5 +19,4 @@ catch(err){
     process.exit();
 }
 }
-
 module.exports=connectMongo

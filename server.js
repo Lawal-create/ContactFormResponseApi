@@ -4,8 +4,8 @@ const express=require("express")
 const app=express()
 const hostname=process.env.HOST
 const port=process.env.PORT;
-const userRoutes=require("./routes/route")
-const db=require(`./utils/connectToDb.js`)
+const userRoutes=require("./routes/userRoutes")
+const db=require(`./utils/DatabaseConn.js`)
 
 db()
 
