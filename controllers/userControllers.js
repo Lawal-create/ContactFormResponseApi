@@ -20,7 +20,7 @@ saveFormData=(req, res)=> {
             .then(doc => {
                 console.log(doc)
             }).catch(err => {
-                console.log("ERROR")
+                console.log("ERROR",err)
             })
     }
 
