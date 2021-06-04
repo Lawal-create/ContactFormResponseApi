@@ -3,7 +3,7 @@ const mongoose=require("mongoose")
 const DB = process.env.DATABASE_LOCALHOST
 const connectMongo= async()=>{
 try{
-    
+    //connect to the database
     await mongoose.connect(
     DB,{
         useNewUrlParser:true,
