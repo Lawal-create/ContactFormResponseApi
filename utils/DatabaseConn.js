@@ -1,8 +1,8 @@
 const mongoose=require("mongoose")
 
 const DB = process.env.DATABASE
-.replace("<PASSWORD>",
-process.env.DATABASE_PASSWORD)
+// .replace("<PASSWORD>",
+// process.env.DATABASE_PASSWORD)
 
 const connectMongo= async()=>{
 try{

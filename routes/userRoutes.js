@@ -9,5 +9,10 @@ router
 .post("/",checkBody,controller.saveFormData)
 .get("/",controller.getSpecificData)
 
+router.get("*",(req,res)=>{
+    res.status(404).json({
+        error:"error 404 This page doesn't exist"
+    })
+})
 
 module.exports=router
