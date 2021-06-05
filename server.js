@@ -1,5 +1,5 @@
 const dotenv=require("dotenv")
-dotenv.config({path: __dirname + './.env'})
+dotenv.config({path: __dirname + '/.env'})
 const express=require("express")
 const app=express()
 // const hostname=process.env.HOST
