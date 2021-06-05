@@ -48,16 +48,16 @@ QUERY PARAMETERS
         limit: it defines the number of results per page. If not specified it defaults to 10.
     </li> -->
     <li>
-        firstName: Used to filter the users based on firstName. IT IS CASE SENSITIVE
+        Firstname: Used to filter the users based on firstName. IT IS CASE SENSITIVE
     </li>
      <li>
-        lastName: Used to filter the users based on lastName. IT IS CASE SENSITIVE
+        Lastname: Used to filter the users based on lastName. IT IS CASE SENSITIVE
     </li>
      <li>
-        email: Used to filter the users based on email. IT IS CASE SENSITIVE
+        EmailAddress: Used to filter the users based on email. IT IS CASE SENSITIVE
     </li>
     <li>
-        phoneNUmber: Used to filter the users based on phoneNumber. IT IS CASE SENSITIVE
+        PhoneNumber: Used to filter the users based on phoneNumber. IT IS CASE SENSITIVE
     </li>
 </ul>
 
