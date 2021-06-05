@@ -27,7 +27,7 @@ const checkBody=(req, res,next)=>{
     let emailCheck=checkEmail(formData.EmailAddress)
     let phoneNumberCheck=checkPhoneNumber(formData.PhoneNumber)
     let firstnameCheck=formData.Firstname.length>0
-    let secondnameCheck=formData.Secondname.length>0
+    let secondnameCheck=formData.Lastname.length>0
 
     if(inquiryCheck===emailCheck===phoneNumberCheck===firstnameCheck===secondnameCheck){
         next();

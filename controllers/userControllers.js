@@ -3,13 +3,15 @@ express()
 const inquiryList=["I have a question about the service","I have a problem with the API","I have an issue with the product that needs to be resolves urgently","I have a minor problem","My inquiry isn't amongst the ones mentioned above"]
 const schemas=require(`../models/userContactSchema.js`)
 
-getSpecificData=async(req,res)=> {
+const getSpecificData=async(req,res)=> {
     try{
         //filters the data passed 
         const search_value =req.query
         const results=await schemas.find(search_value)
         res.status(200).json(results)
-    }catch(error){
+
+    }
+    catch(error){
         res.status(500).json({
             status: 'failure',
             error: error.message
@@ -18,7 +20,7 @@ getSpecificData=async(req,res)=> {
 }
     
 
-saveFormData=(req, res)=> {
+const saveFormData=(req, res)=> {
 
     //creates the user object using the schema
     let value = req.body

@@ -9,7 +9,7 @@ const contact=new mongoose.Schema({
     Firstname: {
         type:String
     },
-    Secondname: {
+    Lastname: {
         type:String
     },
     EmailAddress: {
