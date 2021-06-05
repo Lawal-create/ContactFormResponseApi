@@ -9,11 +9,16 @@ const getSpecificData=async(req,res)=> {
         //filters the data passed 
         const search_value =req.query
         const results=await schemas.find(search_value)
-        res.status(200).json(results)
+        const result={
+            Result:results
+        }
+        res.status(200).json(
+            result
+        )
 
     }
     catch(error){
-        
+
         res.status(500).json({
             status: 'failure',
             error: error.message
