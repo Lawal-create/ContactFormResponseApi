@@ -13,6 +13,7 @@ const getSpecificData=async(req,res)=> {
 
     }
     catch(error){
+        
         res.status(500).json({
             status: 'failure',
             error: error.message
