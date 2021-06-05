@@ -38,8 +38,8 @@ const saveFormData=(req, res)=> {
     //saves the data gotten to the database
     try{
         testContact.save()
-        res.status(200).json(testContact)
-        console.log(testContact)
+        // res.status(200).json(testContact)
+        res.status(200).send("Your response has been saved. Thank you for your time")
 
 
     } catch(error){

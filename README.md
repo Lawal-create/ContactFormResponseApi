@@ -29,7 +29,7 @@ SAMPLE REQUEST BODY
     }
 </pre>
 
-if successful you receive a response
+If successful you receive a response
 <pre>
     Your response has been saved. Thank you for your time
 </pre>
