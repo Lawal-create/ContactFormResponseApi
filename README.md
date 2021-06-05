@@ -63,5 +63,5 @@ QUERY PARAMETERS
 
 Sample Request
 <pre>
-    GET BASE_URL/?firstName=Hakeem&lastName=Lawal
+    GET BASE_URL/?Firstname=Hakeem&Lastname=Lawal
 </pre>
