@@ -12,7 +12,6 @@ const getSpecificData=async(req,res)=> {
     let currentYear=new Date().getFullYear().toString()
 
     const search_value =req.query
-    
     try{
         //filters the data passed 
         const results=await schemas.find(search_value)
