@@ -3,6 +3,7 @@ express()
 const inquiryList=["I have a question about the service","I have a problem with the API","I have an issue with the product that needs to be resolves urgently","I have a minor problem","My inquiry isn't amongst the ones mentioned above"]
 const schemas=require(`../models/userContactSchema.js`)
 
+
 const getSpecificData=async(req,res)=> {
     try{
         //filters the data passed 
