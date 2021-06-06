@@ -41,12 +41,6 @@ If successful you receive a response
 
 QUERY PARAMETERS
 <ul>
-    <!-- <li>
-        page: This defines what page of results. It defaults to 1 if the value is not defined 
-    </li>
-    <li>
-        limit: it defines the number of results per page. If not specified it defaults to 10.
-    </li> -->
     <li>
         Firstname: Used to filter the users based on firstName. IT IS CASE SENSITIVE
     </li>
