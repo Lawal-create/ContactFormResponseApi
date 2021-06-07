@@ -6,10 +6,6 @@ const schemas=require(`../models/userContactSchema.js`)
 
 const getSpecificData=async(req,res,next)=> {
 
-    let currentDay=new Date().getDay().toString()
-    let currentMonth=new Date().getMonth().toString()
-    let currentYear=new Date().getFullYear().toString()
-
     const search_value =req.query
     try{
         //filters the data passed 
