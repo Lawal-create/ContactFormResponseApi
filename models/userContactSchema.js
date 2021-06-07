@@ -2,6 +2,9 @@ const mongoose=require("mongoose")
 
 //Schema for the form input
 const contact=new mongoose.Schema({
+
+    
+
     inquiry:{
     type:String
     },
@@ -22,7 +25,7 @@ const contact=new mongoose.Schema({
     Message: {
         type:String
     }
-})
+},{timestamps: true})
 
 const Contact=mongoose.model("Contact",contact)
 module.exports=Contact

@@ -11,7 +11,6 @@ const getSpecificData=async(req,res,next)=> {
         //filters the data passed 
         const results=await schemas.find(search_value)
         const count=await schemas.countDocuments(search_value)
-
         const result={
             totalNoOfResponses:count,
             Result:results
@@ -42,7 +41,6 @@ const saveFormData=(req, res, next)=> {
     //saves the data gotten to the database
     try{
         testContact.save()
-        // res.status(200).json(testContact)
         res.status(200).send("Your response has been saved. Thank you for your time")
 
 
