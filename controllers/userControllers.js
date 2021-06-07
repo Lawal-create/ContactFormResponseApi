@@ -1,11 +1,10 @@
 const express=require("express")
-const { deleteOne } = require("../models/userContactSchema.js")
 express()
 const inquiryList=["I have a question about the service","I have a problem with the API","I have an issue with the product that needs to be resolves urgently","I have a minor problem","My inquiry isn't amongst the ones mentioned above"]
 const schemas=require(`../models/userContactSchema.js`)
 
 
-const getSpecificData=async(req,res)=> {
+const getSpecificData=async(req,res,next)=> {
 
     let currentDay=new Date().getDay().toString()
     let currentMonth=new Date().getMonth().toString()
@@ -18,9 +17,6 @@ const getSpecificData=async(req,res)=> {
         const count=await schemas.countDocuments(search_value)
 
         const result={
-            Day:currentDay,
-            Month:currentMonth,
-            Year:currentYear,
             totalNoOfResponses:count,
             Result:results
         }
@@ -39,7 +35,7 @@ const getSpecificData=async(req,res)=> {
 }
     
 
-const saveFormData=(req, res)=> {
+const saveFormData=(req, res, next)=> {
 
     //creates the user object using the schema
     let value = req.body
