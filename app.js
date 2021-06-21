@@ -4,7 +4,6 @@ const express=require("express")
 const app=express()
 const userRoutes=require("./routes/userRoutes")
 const db=require(`./utils/DatabaseConn.js`)
-const request = require('supertest');
 const globalErrorHandler=require("./controllers/errorController")
 db()
 
