@@ -1,11 +1,43 @@
 const app=require("../app")
 const request=require("supertest")
-
+const { MongoClient } = require("mongodb");
 
 beforeAll(()=>{
   process.env.NODE_ENV="test"
 })
 
+describe("insert", () => {
+  let connection;
+  let db;
+
+  beforeAll(async () => {
+    connection = await MongoClient.connect(process.env.DATABASE_LOCALHOST, {
+      useNewUrlParser: true
+    });
+    db = await connection.db(process.env.DATABASE_NAME_TEST);
+  });
+
+  afterAll(async () => {
+    await connection.close();
+  });
+
+  it("should insert a doc into collection", async () => {
+    const users = db.collection("users");
+
+    const mockUser = {
+      inquiry:"2",
+      Firstname:"Hameed",
+      Lastname:"Lawal",
+      EmailAddress:"lawinohal@gmail.com",
+      PhoneNumber:"08065364077",
+    };
+    await users.insertOne(mockUser);
+
+    const insertedUser = await users.findOne({ Firstname:"Hameed" });
+    expect(insertedUser).toEqual(mockUser);
+  });
+  
+})
 
 describe("GET /",()=>{
 
