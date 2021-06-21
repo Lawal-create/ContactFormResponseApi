@@ -6,20 +6,25 @@ const contact=new mongoose.Schema({
     
 
     inquiry:{
-    type:String
+    type:String,
+    required:true   
     },
     
     Firstname: {
-        type:String
+        type:String,
+        required:true
     },
     Lastname: {
-        type:String
+        type:String,
+        required:true
     },
     EmailAddress: {
-        type:String
+        type:String,
+        required:true
     },
     PhoneNumber: {
-        type:String
+        type:String,
+        required:true
         
     },
     Message: {
