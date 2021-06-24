@@ -3,9 +3,6 @@ const validator=require("validator")
 
 //Schema for the form input
 const contact=new mongoose.Schema({
-
-    
-
     inquiry:{
     type:String,
     required:true   
@@ -22,7 +19,6 @@ const contact=new mongoose.Schema({
     EmailAddress: {
         type:String,
         required:true,
-        unique:true,
         lowercase:true
     },
     PhoneNumber: {
